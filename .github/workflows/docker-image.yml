@@ -15,7 +15,7 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
         
-    - name: Build the Docker image
+    - name: Copy apps.json
       run: export APPS_JSON_BASE64=$(base64 -w 0 -i apps.json)
 
     - name: Login to GitHub Container Registry
